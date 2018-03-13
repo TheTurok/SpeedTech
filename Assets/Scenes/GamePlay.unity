@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   start: {x: -1, y: 0, z: 0}
   cardPrefab: {fileID: 951079027}
-  faceUp: 1
+  faceUp: 0
   reverseLayerOrder: 0
   cardOffset: 0
 --- !u!114 &39549778
@@ -685,6 +685,7 @@ GameObject:
   - component: {fileID: 885311308}
   - component: {fileID: 885311307}
   - component: {fileID: 885311306}
+  - component: {fileID: 885311309}
   m_Layer: 0
   m_Name: RightDraw
   m_TagString: Untagged
@@ -706,7 +707,7 @@ MonoBehaviour:
   start: {x: 3, y: 0, z: 0}
   cardPrefab: {fileID: 951079027}
   faceUp: 0
-  reverseLayerOrder: 1
+  reverseLayerOrder: 0
   cardOffset: 0.012
 --- !u!114 &885311307
 MonoBehaviour:
@@ -733,6 +734,17 @@ Transform:
   m_Father: {fileID: 1648879310}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!122 &885311309
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885311305}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286611584
+  m_Size: 1
 --- !u!1001 &951079026
 Prefab:
   m_ObjectHideFlags: 0
@@ -1512,6 +1524,7 @@ GameObject:
   - component: {fileID: 1944742405}
   - component: {fileID: 1944742404}
   - component: {fileID: 1944742403}
+  - component: {fileID: 1944742406}
   m_Layer: 0
   m_Name: LeftDraw
   m_TagString: Untagged
@@ -1560,3 +1573,14 @@ Transform:
   m_Father: {fileID: 1648879310}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!122 &1944742406
+Halo:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1944742402}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286611584
+  m_Size: 1

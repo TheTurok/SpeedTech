@@ -11,12 +11,14 @@ public class Setup : MonoBehaviour {
     public GameObject card;
     CardModel cm;
     CardFlipper flip;
-    
+    Behaviour rHalo, lHalo;
 
     void Awake()
     {
         cm = card.GetComponent<CardModel>();
         flip = card.GetComponent<CardFlipper>();
+        rHalo  = (Behaviour)rightDraw.GetComponent("Halo");
+        lHalo = (Behaviour)leftDraw.GetComponent("Halo");
     }
 
     // Update is called once per frame
@@ -39,12 +41,15 @@ public class Setup : MonoBehaviour {
             rightPlay.Push(dealer.Pop());
         }
 
-        if(p1g.IsReady() && p2g.IsReady()){
+        rHalo.enabled = p1g.IsReady(); //halo card when ready by one opponent
+        lHalo.enabled = p1g.IsReady();
+
+        if (p1g.IsReady() && p2g.IsReady()){  //check if both opponents are ready
             p1g.Unready();
             p2g.Unready();
             Restack();
         }
-
+        
 
         //Card Flip From Both Sides Method
         if ( !Check(p1Hand) && !Check(p2Hand) ) //Checks Every Card 

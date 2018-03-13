@@ -434,8 +434,8 @@ MonoBehaviour:
   start: {x: 3, y: -3, z: 0}
   cardPrefab: {fileID: 951079027}
   faceUp: 0
-  reverseLayerOrder: 0
-  cardOffset: -0.005
+  reverseLayerOrder: 1
+  cardOffset: 0.005
 --- !u!114 &529085441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,8 +706,8 @@ MonoBehaviour:
   start: {x: 3, y: 0, z: 0}
   cardPrefab: {fileID: 951079027}
   faceUp: 0
-  reverseLayerOrder: 0
-  cardOffset: -0.012
+  reverseLayerOrder: 1
+  cardOffset: 0.012
 --- !u!114 &885311307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1317,8 +1317,8 @@ MonoBehaviour:
   start: {x: -4, y: 3, z: 0}
   cardPrefab: {fileID: 951079027}
   faceUp: 0
-  reverseLayerOrder: 0
-  cardOffset: 0.005
+  reverseLayerOrder: 1
+  cardOffset: -0.005
 --- !u!114 &1344735417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1533,8 +1533,8 @@ MonoBehaviour:
   start: {x: -3, y: 0, z: 0}
   cardPrefab: {fileID: 951079027}
   faceUp: 0
-  reverseLayerOrder: 0
-  cardOffset: 0.012
+  reverseLayerOrder: 1
+  cardOffset: -0.012
 --- !u!114 &1944742404
 MonoBehaviour:
   m_ObjectHideFlags: 0

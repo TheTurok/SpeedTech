@@ -50,11 +50,11 @@ public class Setup : MonoBehaviour {
         if ( !Check(p1Hand) && !Check(p2Hand) ) //Checks Every Card 
         {
             if (p1Hand.getHandCount() < 5 && player1.cardCount > 0)
-            {
-            }
+            {} // if hand count is  less than 5 but haven't drawn everything
             else if (p2Hand.getHandCount() < 5 && player2.cardCount > 0)
-            {
-            }
+            {} //same for player two
+            else if (p2Hand.getHandCount() == 0 && p1Hand.getHandCount() == 0)
+            {} //stop restacking infinite loop if they have no cards in their hand
             else
             {
                 Restack();

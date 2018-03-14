@@ -8,10 +8,12 @@ public class Setup : MonoBehaviour {
     public Hand p1Hand, p2Hand;
     public GamePlay p1g, p2g;
 
-    public GameObject card;
+    
     CardModel cm;
     CardFlipper flip;
     Behaviour rHalo, lHalo;
+
+    public GameObject card;
 
     void Awake()
     {

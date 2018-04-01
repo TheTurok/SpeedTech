@@ -100,7 +100,7 @@ public class Server : MonoBehaviour
             if(c != null && c.Client != null && c.Client.Connected)
             {
                 if (c.Client.Poll(0, SelectMode.SelectRead))
-                    return !(c.Client.Receive(new byte[1], SocketFlags.Peek) == 0;
+                    return !(c.Client.Receive(new byte[1], SocketFlags.Peek) == 0);
 
                 return true;
             }
@@ -115,6 +115,25 @@ public class Server : MonoBehaviour
         }
     }
 
+    //server send
+    private void Broadcast(string data, List<ServerClient> cl)
+    {
+        foreach(ServerClient sc in cl)
+        {
+            try
+            {
+                StreamWriter writer = new StreamWriter(sc.tcp.GetStream());
+                writer.WriteLine(data);
+                writer.Flush();
+
+            }
+            catch(Exception e)
+            {
+                Debug.Log("Write error: " + e.Message);
+            }
+        }
+    }
+    //server read
     private void OnIncomingData(ServerClient c, string data){
         Debug.Log(c.clientName + " : " + data);
     }
